@@ -1,0 +1,36 @@
+connection :
+  repository: centdb
+  username : dmadmin
+  password : password
+
+endpoints :
+  shutdown :
+    enabled : true
+
+transmittal :
+  packaging :
+    retry :
+      count : 2
+
+spring:
+  application:
+    admin:
+      enabled: true
+
+ftp:
+  delivery:
+    routing: ftp_delivery
+  retry:
+    count: 2
+
+email:
+  delivery:
+    routing: email_delivery
+  retry:
+    count: 2
+
+action:
+  delivery :
+    routing: generic_action_delivery
+  retry:
+    count: 2
